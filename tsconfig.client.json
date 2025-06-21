@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "${configDir}/lib/.tsbuildinfo-client",
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "target": "esnext"
+  },
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/nprogress.ts",
+    "src/prism-include-languages.ts",
+    "src/theme",
+    "src/*.d.ts"
+  ]
+}
