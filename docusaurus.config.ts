@@ -41,6 +41,14 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    announcementBar: {
+      id: "support_us",
+      content:
+        'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+      backgroundColor: "#fafbfc",
+      textColor: "#091E42",
+      isCloseable: true,
+    },
     navbar: {
       title: "My Site",
       logo: {
