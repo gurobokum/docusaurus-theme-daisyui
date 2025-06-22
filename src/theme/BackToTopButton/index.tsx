@@ -1,22 +1,22 @@
-import React, {type ReactNode} from 'react';
-import clsx from 'clsx';
-import {translate} from '@docusaurus/Translate';
-import {ThemeClassNames} from '@docusaurus/theme-common';
-import {useBackToTopButton} from '@docusaurus/theme-common/internal';
+import React, { type ReactNode } from "react";
+import clsx from "clsx";
+import { translate } from "@docusaurus/Translate";
+import { ThemeClassNames } from "@docusaurus/theme-common";
+import { useBackToTopButton } from "@docusaurus/theme-common/internal";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 export default function BackToTopButton(): ReactNode {
-  const {shown, scrollToTop} = useBackToTopButton({threshold: 300});
+  const { shown, scrollToTop } = useBackToTopButton({ threshold: 300 });
   return (
     <button
       aria-label={translate({
-        id: 'theme.BackToTopButton.buttonAriaLabel',
-        message: 'Scroll back to top',
-        description: 'The ARIA label for the back to top button',
+        id: "theme.BackToTopButton.buttonAriaLabel",
+        message: "Scroll back to top",
+        description: "The ARIA label for the back to top button",
       })}
       className={clsx(
-        'clean-btn',
+        "clean-btn",
         ThemeClassNames.common.backToTopButton,
         styles.backToTopButton,
         shown && styles.backToTopButtonShow,
