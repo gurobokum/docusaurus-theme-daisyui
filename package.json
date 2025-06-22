@@ -18,26 +18,43 @@
     "format:check": "prettier --check '**/*.{ts,tsx,js,jsx,json,md}'",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "swizzle": "docusaurus swizzle"
   },
   "keywords": [],
   "author": "Guro Bokum <jiojiajiu@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "@docusaurus/types": "^3.8.1",
+    "clsx": "^2.1.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
+    "@docusaurus/theme-classic": "^3.8.1",
     "@eslint/js": "^9.29.0",
     "@storybook/addon-docs": "^9.0.12",
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
     "@storybook/react-webpack5": "^9.0.12",
+    "@types/react": "^19.1.8",
+    "dotenv": "^16.5.0",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-storybook": "^9.0.12",
     "globals": "^16.2.0",
     "husky": "^9.1.7",
     "prettier": "^3.5.3",
+    "prism-react-renderer": "^2.4.1",
+    "react-router-dom": "^7.6.2",
     "storybook": "^9.0.12",
-    "typescript": "~5.8.3",
-    "typescript-eslint": "^8.34.1"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.1",
+    "webpack": "^5.99.9"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   }
 }

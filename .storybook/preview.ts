@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react-webpack5";
+import { DocusaurusDecorator } from "./decorators";
 
 const preview: Preview = {
   parameters: {
@@ -9,6 +10,7 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [DocusaurusDecorator],
 };
 
 export default preview;
