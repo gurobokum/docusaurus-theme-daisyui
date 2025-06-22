@@ -1,27 +1,30 @@
 import React from "react";
 import { Decorator } from "@storybook/react-webpack5";
-import LayoutProvider from "@theme/Layout/Provider";
 import { RouteContextProvider } from "@docusaurus/core/lib/client/routeContext";
 import { HelmetProvider } from "react-helmet-async";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
+import { BrowserContextProvider } from "@docusaurus/core/lib/client/browserContext";
+import LayoutProvider from "@theme/Layout/Provider";
 
 export const DocusaurusDecorator: Decorator = (Story) => {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <RouteContextProvider
-          value={{
-            plugin: {
-              id: "storybook-docusaurus-daisyui",
-              name: "storybook-docusaurus-daisyui",
-            },
-          }}
-        >
-          <LayoutProvider>
-            <Story />
-          </LayoutProvider>
-        </RouteContextProvider>
-      </BrowserRouter>
-    </HelmetProvider>
+    <BrowserContextProvider>
+      <HelmetProvider>
+        <MemoryRouter>
+          <RouteContextProvider
+            value={{
+              plugin: {
+                id: "storybook-docusaurus-daisyui",
+                name: "storybook-docusaurus-daisyui",
+              },
+            }}
+          >
+            <LayoutProvider>
+              <Story />
+            </LayoutProvider>
+          </RouteContextProvider>
+        </MemoryRouter>
+      </HelmetProvider>
+    </BrowserContextProvider>
   );
 };
