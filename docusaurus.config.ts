@@ -2,7 +2,6 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import "dotenv/config";
-import path from "path";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -38,7 +37,7 @@ const config: Config = {
     locales: ["en"],
   },
 
-  themes: [path.resolve(__dirname, "src")],
+  themes: ["classic"],
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",

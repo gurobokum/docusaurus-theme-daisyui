@@ -61,7 +61,7 @@ const config: StorybookConfig = {
         rules: [
           ...(config.module?.rules || []),
           ...((clientConfig.module?.rules as RuleSetRule[])?.filter((rule) =>
-            ruleMatches(rule, ".svg", ".js", ".woff")
+            ruleMatches(rule, ".svg", ".js", ".woff"),
           ) || []),
         ],
       },
