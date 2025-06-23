@@ -1,11 +1,12 @@
-import React from "react";
-import { Decorator } from "@storybook/react-webpack5";
-import { RouteContextProvider } from "@docusaurus/core/lib/client/routeContext";
-import { HelmetProvider } from "react-helmet-async";
-import { MemoryRouter } from "react-router-dom";
 import { BrowserContextProvider } from "@docusaurus/core/lib/client/browserContext";
 import { DocusaurusContextProvider } from "@docusaurus/core/lib/client/docusaurusContext";
+import { RouteContextProvider } from "@docusaurus/core/lib/client/routeContext";
+import { Decorator } from "@storybook/react-webpack5";
 import LayoutProvider from "@theme/Layout/Provider";
+import ThemeProvider from "@theme/ThemeProvider";
+import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { MemoryRouter } from "react-router-dom";
 
 export const DocusaurusDecorator: Decorator = (Story) => {
   return (
@@ -22,7 +23,9 @@ export const DocusaurusDecorator: Decorator = (Story) => {
           >
             <DocusaurusContextProvider>
               <LayoutProvider>
-                <Story />
+                <ThemeProvider>
+                  <Story />
+                </ThemeProvider>
               </LayoutProvider>
             </DocusaurusContextProvider>
           </RouteContextProvider>

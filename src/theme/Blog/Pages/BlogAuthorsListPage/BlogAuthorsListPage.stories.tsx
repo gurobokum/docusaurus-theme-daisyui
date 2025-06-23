@@ -1,19 +1,9 @@
-import React from "react";
-import type { Decorator, Meta, StoryObj } from "@storybook/react-webpack5";
-//import { ThemeProviderTitleFormatter } from "@theme/ThemeProvider/TitleFormatter";
-import ThemeProvider from "@theme/ThemeProvider";
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 import BlogAuthorsListPage from "./index";
 
-const AuthorsDecorator: Decorator = (Story) => (
-  <ThemeProvider>
-    <Story />
-  </ThemeProvider>
-);
-
 const meta = {
-  title: "Blog/BlogAuthorsListPage",
+  title: "Blog/Pages/AuthorsList",
   component: BlogAuthorsListPage,
-  decorators: [AuthorsDecorator],
 } satisfies Meta<typeof BlogAuthorsListPage>;
 
 export default meta;
