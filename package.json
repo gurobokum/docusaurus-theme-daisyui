@@ -19,19 +19,23 @@
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "docusaurus": "docusaurus start",
     "swizzle": "docusaurus swizzle"
   },
   "keywords": [],
   "author": "Guro Bokum <jiojiajiu@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@docusaurus/plugin-content-blog": "^3.8.1",
     "@docusaurus/types": "^3.8.1",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "copy-text-to-clipboard": "^3.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@docusaurus/core": "^3.8.1",
+    "@docusaurus/plugin-content-docs": "^3.8.1",
     "@docusaurus/preset-classic": "^3.8.1",
     "@docusaurus/theme-classic": "^3.8.1",
     "@docusaurus/theme-common": "^3.8.1",

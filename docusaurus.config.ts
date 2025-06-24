@@ -37,8 +37,17 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+  presets: [
+    [
+      "classic",
+      {
+        docs: {},
+        blog: {},
+      } satisfies Preset.Options,
+    ],
+  ],
 
-  themes: ["classic", theme],
+  themes: [theme],
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
