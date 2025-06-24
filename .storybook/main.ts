@@ -40,6 +40,7 @@ const config: StorybookConfig = {
 
     let finalConfig: Configuration = {
       ...config,
+      name: clientConfig.name,
       entry: [
         ...normalizeEntry(config.entry),
         ...normalizeEntry(clientConfig.entry),
@@ -61,7 +62,7 @@ const config: StorybookConfig = {
         rules: [
           ...(config.module?.rules || []),
           ...((clientConfig.module?.rules as RuleSetRule[])?.filter((rule) =>
-            ruleMatches(rule, ".svg", ".js", ".woff"),
+            ruleMatches(rule, ".svg", ".js", ".woff")
           ) || []),
         ],
       },
