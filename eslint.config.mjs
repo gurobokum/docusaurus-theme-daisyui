@@ -5,6 +5,7 @@ import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import reactPlugin from "eslint-plugin-react";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 
 import { defineConfig, globalIgnores } from "eslint/config";
 
@@ -22,4 +23,5 @@ export default defineConfig([
   tseslint.configs.recommended,
   storybook.configs["flat/recommended"],
   reactPlugin.configs.flat.recommended,
+  jsxA11y.flatConfigs.recommended,
 ]);
