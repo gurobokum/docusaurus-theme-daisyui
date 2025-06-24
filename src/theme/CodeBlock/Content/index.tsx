@@ -21,7 +21,7 @@ const Pre = React.forwardRef<HTMLPreElement, ComponentProps<"pre">>(
         className={clsx(props.className, styles.codeBlock, "thin-scrollbar")}
       />
     );
-  }
+  },
 );
 
 function Code(props: ComponentProps<"code">) {
@@ -33,7 +33,7 @@ function Code(props: ComponentProps<"code">) {
         props.className,
         styles.codeBlockLines,
         metadata.lineNumbersStart !== undefined &&
-          styles.codeBlockLinesWithNumbering
+          styles.codeBlockLinesWithNumbering,
       )}
       style={{
         ...props.style,
