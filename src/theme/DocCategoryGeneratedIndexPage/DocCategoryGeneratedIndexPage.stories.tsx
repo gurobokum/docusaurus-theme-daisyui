@@ -2,54 +2,13 @@ import React from "react";
 import type { Decorator, Meta, StoryObj } from "@storybook/react-webpack5";
 import { DocsVersionProvider } from "@docusaurus/plugin-content-docs/client";
 import { DocsSidebarProvider } from "@docusaurus/plugin-content-docs/client";
-import {
-  PropSidebarBreadcrumbsItem,
-  PropSidebarItemLink,
-} from "@docusaurus/plugin-content-docs";
 
+import { DocVersion, SidebarItems } from "../../../.storybook/mocks";
 import DocCategoryGeneratedIndexPage from "./index";
 
-const version = {
-  label: "1.0.0",
-  version: "1.0.0",
-  pluginId: "default",
-  banner: null,
-  badge: true,
-  className: "",
-  isLast: false,
-  noIndex: false,
-  docsSidebars: {},
-  docs: {},
-};
-
-const items: PropSidebarBreadcrumbsItem[] = [
-  {
-    type: "category",
-    label: "Home",
-    description: "Home page",
-    collapsed: false,
-    collapsible: true,
-    items: [
-      {
-        collapsed: true,
-        collapsible: true,
-        type: "category",
-        label: "Category",
-        items: [
-          {
-            type: "link",
-            href: "/",
-            label: "Sub",
-          } satisfies PropSidebarItemLink,
-        ],
-      },
-    ],
-  },
-];
-
 const DocCategoryDecorator: Decorator = (Story) => (
-  <DocsSidebarProvider name="default" items={items}>
-    <DocsVersionProvider version={version}>
+  <DocsSidebarProvider name="default" items={SidebarItems}>
+    <DocsVersionProvider version={DocVersion}>
       <Story />
     </DocsVersionProvider>
   </DocsSidebarProvider>

@@ -2,23 +2,11 @@ import React from "react";
 import type { Decorator, Meta, StoryObj } from "@storybook/react-webpack5";
 import { DocsVersionProvider } from "@docusaurus/plugin-content-docs/client";
 
+import { DocVersion } from "../../../.storybook/mocks";
 import DocCardList from "./index";
 
-const version = {
-  label: "1.0.0",
-  version: "1.0.0",
-  pluginId: "default",
-  banner: null,
-  badge: true,
-  className: "",
-  isLast: false,
-  noIndex: false,
-  docsSidebars: {},
-  docs: {},
-};
-
 const DocCardDecorator: Decorator = (Story) => (
-  <DocsVersionProvider version={version}>
+  <DocsVersionProvider version={DocVersion}>
     <Story />
   </DocsVersionProvider>
 );
