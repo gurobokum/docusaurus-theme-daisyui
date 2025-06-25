@@ -2,7 +2,7 @@ import React from "react";
 import type { Decorator, Meta, StoryObj } from "@storybook/react-webpack5";
 import { DocsVersionProvider } from "@docusaurus/plugin-content-docs/client";
 
-import DocCard from "./index";
+import DocCardList from "./index";
 
 const version = {
   label: "1.0.0",
@@ -24,38 +24,33 @@ const DocCardDecorator: Decorator = (Story) => (
 );
 
 const meta = {
-  title: "Doc/Card",
-  component: DocCard,
+  title: "Doc/CardList",
+  args: {
+    items: [
+      {
+        type: "link",
+        href: "/",
+        label: "Link",
+      },
+      {
+        type: "category",
+        href: "/category",
+        label: "category",
+        items: [
+          {
+            type: "link",
+            href: "/sublink",
+            label: "Sublink",
+          },
+        ],
+      },
+    ],
+  },
+  component: DocCardList,
   decorators: [DocCardDecorator],
-} satisfies Meta<typeof DocCard>;
+} satisfies Meta<typeof DocCardList>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Link: Story = {
-  args: {
-    item: {
-      type: "link",
-      href: "/",
-      label: "Link",
-    },
-  },
-};
-
-export const Category: Story = {
-  args: {
-    item: {
-      type: "category",
-      label: "Category",
-      collapsed: false,
-      collapsible: true,
-      items: [
-        {
-          type: "link",
-          href: "/",
-          label: "Link",
-        },
-      ],
-    },
-  },
-};
+export const Default: Story = {};
