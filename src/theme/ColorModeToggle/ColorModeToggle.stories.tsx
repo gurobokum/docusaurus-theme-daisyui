@@ -2,15 +2,17 @@ import React from "react";
 import type { Decorator, Meta, StoryObj } from "@storybook/react-webpack5";
 import ColorModeToggle from "./index";
 
+const defaultArgs = {
+  className: "",
+  buttonClassName: "",
+  respectPrefersColorScheme: false,
+  onChange: () => {},
+};
+
 const meta = {
   title: "Theme/ColorModeToggle",
   component: ColorModeToggle,
   tags: ["autodocs"],
-  args: {
-    className: "",
-    buttonClassName: "",
-    onChage: () => {},
-  },
 } satisfies Meta<typeof ColorModeToggle>;
 
 export default meta;
@@ -18,6 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
   args: {
+    ...defaultArgs,
     value: "light",
   },
   decorators: [
@@ -31,6 +34,7 @@ export const Light: Story = {
 
 export const Dark: Story = {
   args: {
+    ...defaultArgs,
     value: "dark",
   },
   decorators: [
@@ -44,6 +48,7 @@ export const Dark: Story = {
 
 export const System: Story = {
   args: {
+    ...defaultArgs,
     value: null,
   },
   decorators: [

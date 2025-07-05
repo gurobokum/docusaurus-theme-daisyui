@@ -1,91 +1,105 @@
+import React from "react";
 import {
   PropSidebarBreadcrumbsItem,
   PropSidebarItemLink,
 } from "@docusaurus/plugin-content-docs";
 
-export const BlogPostContent = {
-  contentTitle: "Welcome to Docusaurus Blog!",
-  toc: [],
-  frontMatter: {
-    id: "welcome-docusaurus-v2",
-    title: "Welcome Docusaurus",
-    title_meta: "Welcome to Docusaurus Blog!",
-    description: "This is my first post on Docusaurus.",
-    sidebar_label: "Welcome",
-    tags: [
-      { label: "hello", permalink: "/blog/tags/hello" },
-      { label: "docusaurus", permalink: "/blog/tags/docusaurus" },
-    ],
-    slug: "welcome-docusaurus-v2",
-    draft: false,
-    unlisted: false,
-    date: "2024-06-01T10:00:00.000Z",
-    authors: [
-      {
-        name: "Jane Doe",
-        title: "Senior Writer",
-        url: "https://example.com/jane",
-        imageURL: "https://randomuser.me/api/portraits/women/44.jpg",
-        socials: { twitter: "https://twitter.com/janedoe" },
-      },
-    ],
-    author: "Jane Doe",
-    author_title: "Senior Writer",
-    author_url: "https://example.com/jane",
-    author_image_url: "https://randomuser.me/api/portraits/women/44.jpg",
-    authorTitle: "Senior Writer",
-    authorURL: "https://example.com/jane",
-    authorImageURL: "https://randomuser.me/api/portraits/women/44.jpg",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    keywords: ["docusaurus", "blog", "hello"],
-    hide_table_of_contents: false,
-    toc_min_heading_level: 2,
-    toc_max_heading_level: 3,
-    last_update: {
+export const BlogPostContent = Object.assign(
+  () => <div>Blog Post Content</div>,
+  {
+    contentTitle: "Welcome to Docusaurus Blog!",
+    toc: [],
+    frontMatter: {
+      id: "welcome-docusaurus-v2",
+      title: "Welcome Docusaurus",
+      title_meta: "Welcome to Docusaurus Blog!",
+      description: "This is my first post on Docusaurus.",
+      sidebar_label: "Welcome",
+      tags: [
+        { label: "hello", permalink: "/blog/tags/hello" },
+        { label: "docusaurus", permalink: "/blog/tags/docusaurus" },
+      ],
+      slug: "welcome-docusaurus-v2",
+      draft: false,
+      unlisted: false,
       date: "2024-06-01T10:00:00.000Z",
+      authors: [
+        {
+          name: "Jane Doe",
+          title: "Senior Writer",
+          url: "https://example.com/jane",
+          imageURL: "https://randomuser.me/api/portraits/women/44.jpg",
+          socials: { twitter: "https://twitter.com/janedoe" },
+        },
+      ],
       author: "Jane Doe",
+      author_title: "Senior Writer",
+      author_url: "https://example.com/jane",
+      author_image_url: "https://randomuser.me/api/portraits/women/44.jpg",
+      authorTitle: "Senior Writer",
+      authorURL: "https://example.com/jane",
+      authorImageURL: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      keywords: ["docusaurus", "blog", "hello"],
+      hide_table_of_contents: false,
+      toc_min_heading_level: 2,
+      toc_max_heading_level: 3,
+      last_update: {
+        date: "2024-06-01T10:00:00.000Z",
+        author: "Jane Doe",
+      },
+    },
+    metadata: {
+      source: "@site/blog/2024-06-01-welcome-docusaurus-v2.md",
+      title: "Welcome Docusaurus",
+      date: "2024-06-01T10:00:00.000Z",
+      permalink: "/blog/welcome-docusaurus-v2",
+      description: "This is my first post on Docusaurus.",
+      editUrl:
+        "https://github.com/example/repo/edit/main/blog/2024-06-01-welcome-docusaurus-v2.md",
+      readingTime: 2,
+      hasTruncateMarker: false,
+      nextItem: { title: "Second Post", permalink: "/blog/second-post" },
+      prevItem: undefined,
+      authors: [
+        {
+          name: "Jane Doe",
+          title: "Senior Writer",
+          url: "https://example.com/jane",
+          imageURL: "https://randomuser.me/api/portraits/women/44.jpg",
+          socials: { twitter: "https://twitter.com/janedoe" },
+          key: "jane-doe",
+          page: { permalink: "/authors/jane-doe" },
+          description: "Writes about tech and culture.",
+        },
+      ],
+      frontMatter: {},
+      tags: [
+        {
+          label: "hello",
+          permalink: "/blog/tags/hello",
+          description: "Greeting posts",
+          inline: true,
+        },
+        {
+          label: "docusaurus",
+          permalink: "/blog/tags/docusaurus",
+          description: "Posts about Docusaurus",
+          inline: true,
+        },
+      ],
+      unlisted: false,
+      lastUpdatedAt: 1717190400, // Unix timestamp for "2024-06-01T10:00:00.000Z"
+      lastUpdatedBy: "Jane Doe",
+    },
+    assets: {
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      authorsImageUrls: ["https://randomuser.me/api/portraits/women/44.jpg"],
     },
   },
-  metadata: {
-    source: "@site/blog/2024-06-01-welcome-docusaurus-v2.md",
-    title: "Welcome Docusaurus",
-    date: "2024-06-01T10:00:00.000Z",
-    permalink: "/blog/welcome-docusaurus-v2",
-    description: "This is my first post on Docusaurus.",
-    editUrl:
-      "https://github.com/example/repo/edit/main/blog/2024-06-01-welcome-docusaurus-v2.md",
-    readingTime: 2,
-    hasTruncateMarker: false,
-    nextItem: { title: "Second Post", permalink: "/blog/second-post" },
-    prevItem: undefined,
-    authors: [
-      {
-        name: "Jane Doe",
-        title: "Senior Writer",
-        url: "https://example.com/jane",
-        imageURL: "https://randomuser.me/api/portraits/women/44.jpg",
-        socials: { twitter: "https://twitter.com/janedoe" },
-        key: "jane-doe",
-        page: { permalink: "/authors/jane-doe" },
-        description: "Writes about tech and culture.",
-      },
-    ],
-    frontMatter: {},
-    tags: [
-      { label: "hello", permalink: "/blog/tags/hello" },
-      { label: "docusaurus", permalink: "/blog/tags/docusaurus" },
-    ],
-    unlisted: false,
-    lastUpdatedAt: 1717190400, // Unix timestamp for "2024-06-01T10:00:00.000Z"
-    lastUpdatedBy: "Jane Doe",
-  },
-  assets: {
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    authorsImageUrls: ["https://randomuser.me/api/portraits/women/44.jpg"],
-  },
-};
+);
 
-export const DocContent = {
+export const DocContent = Object.assign(() => <div>Doc Content</div>, {
   contentTitle: "Welcome to Docusaurus Docs!",
   toc: [],
   frontMatter: {
@@ -161,9 +175,8 @@ export const DocContent = {
   },
   assets: {
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    authorsImageUrls: ["https://randomuser.me/api/portraits/women/44.jpg"],
   },
-};
+});
 
 export const DocVersion = {
   label: "1.0.0",

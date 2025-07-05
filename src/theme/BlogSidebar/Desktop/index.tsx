@@ -15,7 +15,7 @@ import styles from "./styles.module.css";
 const ListComponent: BlogSidebarContentProps["ListComponent"] = ({
   items,
 }: {
-  items: BlogSidebarContentProps["BlogSidebarItem"][];
+  items: BlogSidebarContentProps["items"];
 }) => {
   return (
     <BlogSidebarItemList

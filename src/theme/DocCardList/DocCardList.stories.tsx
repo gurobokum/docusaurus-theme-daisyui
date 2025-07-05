@@ -24,6 +24,8 @@ const meta = {
         type: "category",
         href: "/category",
         label: "category",
+        collapsed: false,
+        collapsible: true,
         items: [
           {
             type: "link",

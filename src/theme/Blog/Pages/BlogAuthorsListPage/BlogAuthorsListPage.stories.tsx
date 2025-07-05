@@ -18,11 +18,13 @@ export const Default: Story = {
           title: "Old post",
           date: "2023-10-01",
           unlisted: false,
+          permalink: "/blog/old-post",
         },
         {
           title: "New post",
           date: "2025-05-01",
           unlisted: false,
+          permalink: "/blog/new-post",
         },
       ],
     },
