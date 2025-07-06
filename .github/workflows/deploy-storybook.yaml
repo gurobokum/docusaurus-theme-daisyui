@@ -5,9 +5,10 @@ on:
     branches:
       - main
     paths:
-      - docs/**/*.stories.tsx
+      - src/**/*.stories.tsx
       - .storybook/**
-      - docusaurus.config.js
+      - docs/docusaurus.config.js
+      - .github/workflows/deploy-storybook.yaml
   workflow_dispatch:
 
 jobs:
