@@ -1,3 +1,4 @@
+import path from "path";
 import { loadSite } from "@docusaurus/core/lib/server/site";
 import { getAllClientModules } from "@docusaurus/core/lib/server/clientModules";
 import type { Configuration, RuleSetRule } from "webpack";
@@ -16,14 +17,16 @@ const normalizeEntry = (entry: Configuration["entry"]): string[] =>
   Array.isArray(entry) ? entry : ([entry].filter(Boolean) as string[]);
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: ["@storybook/addon-webpack5-compiler-swc", "@storybook/addon-docs"],
+  stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  addons: ["@storybook/addon-webpack5-compiler-swc"],
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
   },
   webpackFinal: async (config) => {
-    const { props } = await loadSite({ siteDir: process.cwd() });
+    const { props } = await loadSite({
+      siteDir: path.resolve(__dirname, "../docs"),
+    });
 
     const configureWebpackUtils = await createConfigureWebpackUtils({
       siteConfig: props.siteConfig,
@@ -68,8 +71,6 @@ const config: StorybookConfig = {
       },
       plugins: [...(config.plugins || []), ...(clientConfig.plugins || [])],
     };
-
-    console.warn(finalConfig.entry, entries);
 
     finalConfig = executePluginsConfigureWebpack({
       plugins: props.plugins as LoadedPlugin[],
