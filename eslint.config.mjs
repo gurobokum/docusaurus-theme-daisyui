@@ -10,7 +10,7 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-  globalIgnores([".docusaurus", "lib", "build"]),
+  globalIgnores(["lib", "build", "storybook-static", "docs"]),
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     plugins: { js },

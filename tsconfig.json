@@ -4,12 +4,11 @@
     "rootDir": "${configDir}/src",
     "outDir": "${configDir}/lib",
     "target": "ES2020",
-    "lib": ["ESNext"],
+    "lib": ["esnext", "DOM"],
     "declaration": true,
     "incremental": true,
     "composite": true,
     "tsBuildInfoFile": "${configDir}/lib/.tsbuildinfo",
-    "erasableSyntaxOnly": true,
 
     "declarationMap": true,
     "sourceMap": false,
@@ -17,7 +16,8 @@
     "importHelpers": true,
     "noEmitHelpers": true,
 
-    "module": "NodeNext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "allowUnreachableCode": false,
 
     "exactOptionalPropertyTypes": false,
@@ -39,7 +39,6 @@
     "noUnusedParameters": false,
     "importsNotUsedAsValues": "remove",
 
-    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -51,5 +50,5 @@
     "noEmit": false
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["src/theme", "src/theme-daisyui.d.ts"]
 }

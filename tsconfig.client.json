@@ -6,10 +6,6 @@
     "target": "esnext"
   },
   "extends": "./tsconfig.json",
-  "include": [
-    "src/nprogress.ts",
-    "src/prism-include-languages.ts",
-    "src/theme",
-    "src/*.d.ts"
-  ]
+  "include": ["src/theme", "src/theme-daisyui.d.ts"],
+  "exclude": ["src/**/*.stories.tsx"]
 }

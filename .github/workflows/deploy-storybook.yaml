@@ -54,7 +54,7 @@ jobs:
       pages: write
       id-token: write
     environment:
-      name: github-pages
+      name: Storybook
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
