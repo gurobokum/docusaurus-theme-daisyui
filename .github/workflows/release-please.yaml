@@ -19,7 +19,7 @@ jobs:
       - uses: googleapis/release-please-action@v4
         id: release-please
         with:
-          release-type: node
+          config-file: release-please-config.json
 
   release:
     runs-on: ubuntu-latest
