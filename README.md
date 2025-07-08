@@ -52,7 +52,7 @@ Related issue: https://github.com/facebook/docusaurus/issues/2961
 | BlogLayout                               | Unsafe       |   ✅    |          |           |
 | BlogListPage                             | Unsafe       |   ✅    |          |           |
 | BlogListPage/StructuredData              | Unsafe       |   ✅    |          |           |
-| BlogListPaginator                        | Unsafe       |         |          |           |
+| BlogListPaginator                        | Unsafe       |   ✅    |          |           |
 | BlogPostItem                             | Unsafe       |   ✅    |          |           |
 | BlogPostItem/Container                   | Unsafe       |   ✅    |          |           |
 | BlogPostItem/Content                     | Unsafe       |   ✅    |          |           |
@@ -87,7 +87,7 @@ Related issue: https://github.com/facebook/docusaurus/issues/2961
 | CodeBlock/Line                           | Unsafe       |   ✅    |          |           |
 | CodeBlock/Line/Tokens                    | Unsafe       |   ✅    |          |           |
 | CodeBlock/Title                          | Unsafe       |   ✅    |          |           |
-| CodeInline                               | Unsafe       |         |          |           |
+| CodeInline                               | Unsafe       |   ✅    |          |           |
 | ColorModeToggle                          | Safe         |   ✅    |          |           |
 | ContentVisibility                        | Unsafe       |   ✅    |          |           |
 | ContentVisibility/Draft                  | Unsafe       |   ✅    |          |           |
@@ -95,10 +95,10 @@ Related issue: https://github.com/facebook/docusaurus/issues/2961
 | Details                                  | Unsafe       |   ✅    |          |           |
 | DocBreadcrumbs                           | Unsafe       |   ✅    |          |           |
 | DocBreadcrumbs/Items/Home                | Unsafe       |   ✅    |          |           |
-| DocBreadcrumbs/StructuredData            | Unsafe       |         |          |           |
+| DocBreadcrumbs/StructuredData            | Unsafe       |   ✅    |          |           |
 | DocCard                                  | Unsafe       |   ✅    |          |           |
 | DocCardList                              | Safe         |   ✅    |          |           |
-| DocCategoryGeneratedIndexPage            | Unsafe       |         |          |           |
+| DocCategoryGeneratedIndexPage            | Unsafe       |   ✅    |          |           |
 | DocItem                                  | Unsafe       |   ✅    |          |           |
 | DocItem/Content                          | Unsafe       |   ✅    |          |           |
 | DocItem/Footer                           | Unsafe       |   ✅    |          |           |
@@ -192,7 +192,27 @@ Related issue: https://github.com/facebook/docusaurus/issues/2961
 | NavbarItem/LocaleDropdownNavbarItem      | Unsafe       |   ✅    |          |           |
 | NavbarItem/NavbarNavLink                 | Unsafe       |   ✅    |          |           |
 | NavbarItem/SearchNavbarItem              | Unsafe       |   ✅    |          |           |
+| NotFound                                 | Safe         |   ✅    |          |           |
+| NotFound/Content                         | Unsafe       |   ✅    |          |           |
+| PaginatorNavLink                         | Unsafe       |   ✅    |          |           |
+| SearchBar                                | Safe         |   ✅    |          |           |
+| SearchMetadata                           | Unsafe       |   ✅    |          |           |
+| SiteMetadata                             | Unsafe       |   ✅    |          |           |
 | SkipToContent                            | Safe         |   ✅    |          |           |
+| TOC                                      | Unsafe       |   ✅    |          |           |
+| TOCCollapsible                           | Unsafe       |   ✅    |          |           |
+| TOCCollapsible/CollapseButton            | Unsafe       |   ✅    |          |           |
+| TOCInline                                | Unsafe       |   ✅    |          |           |
+| TOCItems                                 | Unsafe       |   ✅    |          |           |
+| TOCItems/Tree                            | Unsafe       |   ✅    |          |           |
+| TabItem                                  | Unsafe       |   ✅    |          |           |
+| Tabs                                     | Unsafe       |   ✅    |          |           |
+| Tag                                      | Unsafe       |   ✅    |          |           |
+| TagsListByLetter                         | Unsafe       |   ✅    |          |           |
+| TagsListInline                           | Unsafe       |   ✅    |          |           |
+| ThemeProvider                            | Unsafe       |   ✅    |          |           |
+| ThemeProvider/TitleFormatter             | Unsafe       |   ✅    |          |           |
+| ThemedImage                              | Unsafe       |   ✅    |          |           |
 
 ## Kudos
 
