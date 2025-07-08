@@ -1,5 +1,6 @@
 {
   "always-update": true,
+  "release-type": "node",
   "versioning": "minor",
   "changelog-sections": [
     { "type": "feat", "section": "✨ Features" },
