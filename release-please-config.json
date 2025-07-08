@@ -1,6 +1,9 @@
 {
   "always-update": true,
   "versioning": "always-bump-minor",
+
+  "component-no-space": true,
+
   "changelog-sections": [
     { "type": "feat", "section": "✨ Features" },
     { "type": "fix", "section": "🐛 Bug Fixes" },
@@ -11,6 +14,9 @@
   ],
   "packages": {
     ".": {
+
+      "component": "main",
+
       "release-type": "node",
       "pull-request-title-pattern": "release: ${version}"
     }
