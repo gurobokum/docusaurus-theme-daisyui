@@ -15,7 +15,7 @@
       "component": "docusaurus-theme-daisyui",
       "release-type": "node",
       "pull-request-title-pattern": "release: ${version}",
-      "release-as": "0.1.0"
+      "release-as": "0.1.1"
     }
   }
 }
