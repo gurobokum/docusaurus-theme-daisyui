@@ -1,7 +1,6 @@
 {
   "always-update": true,
-  "release-type": "node",
-  "versioning": "minor",
+  "versioning": "always-bump-minor",
   "changelog-sections": [
     { "type": "feat", "section": "✨ Features" },
     { "type": "fix", "section": "🐛 Bug Fixes" },
@@ -9,5 +8,11 @@
     { "type": "perf", "section": "🚀 Performance Improvements" },
     { "type": "docs", "section": "📚 Documentation" },
     { "type": "test", "section": "♻️ Tests" }
-  ]
+  ],
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "pull-request-title-pattern": "release: ${version}"
+    }
+  }
 }
