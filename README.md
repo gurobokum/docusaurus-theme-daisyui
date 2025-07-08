@@ -169,7 +169,7 @@ Related issue: https://github.com/facebook/docusaurus/issues/2961
 | Navbar/ColorModeToggle                   | Unsafe       |   ✅    |          |           |
 | Navbar/Content                           | Unsafe       |   ✅    |          |           |
 | Navbar/Layout                            | Unsafe       |   ✅    |          |           |
-| Navbar/Logo                              | Unsafe       |   ✅    |          |           |
+| Navbar/Logo                              | Unsafe       |   ✅    |          |    ✅     |
 | Navbar/MobileSidebar                     | Unsafe       |   ✅    |          |           |
 | Navbar/MobileSidebar/Header              | Unsafe       |   ✅    |          |           |
 | Navbar/MobileSidebar/Layout              | Unsafe       |   ✅    |          |           |
