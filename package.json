@@ -7,11 +7,17 @@
   },
   "packageManager": "pnpm@10.11.1",
   "main": "lib/index.js",
-  "types": "src/theme-classic.d.ts",
+  "types": "src/theme-daisyui.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/gurobokum/docusaurus-theme-daisyui.git"
   },
+  "files": [
+    "lib",
+    "!lib/.tsbuildinfo*",
+    "src",
+    "!src/**/*.stories.tsx"
+  ],
   "scripts": {
     "build": "tsc --build  && node scripts/copyUntypedFiles.js && prettier --write 'lib/theme/**/*.js'",
     "lint": "eslint --max-warnings=0",
