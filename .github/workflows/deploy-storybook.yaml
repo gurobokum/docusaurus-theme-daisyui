@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build Storybook
-        run: pnpm build-storybook
+        run: pnpm storybook:build
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
