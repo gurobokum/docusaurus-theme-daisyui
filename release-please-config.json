@@ -1,7 +1,7 @@
 {
   "always-update": true,
-  "release-type": "node",
-  "versioning": "minor",
+  "versioning": "always-bump-minor",
+  "component-no-space": true,
   "changelog-sections": [
     { "type": "feat", "section": "✨ Features" },
     { "type": "fix", "section": "🐛 Bug Fixes" },
@@ -9,5 +9,12 @@
     { "type": "perf", "section": "🚀 Performance Improvements" },
     { "type": "docs", "section": "📚 Documentation" },
     { "type": "test", "section": "♻️ Tests" }
-  ]
+  ],
+  "packages": {
+    ".": {
+      "component": "main",
+      "release-type": "node",
+      "pull-request-title-pattern": "release: ${version}"
+    }
+  }
 }
