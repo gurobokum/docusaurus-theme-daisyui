@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-theme-daisyui",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha.0",
   "description": "DaisyUI theme for Docusaurus",
   "engines": {
     "node": ">=18.0"
@@ -13,13 +13,14 @@
     "url": "https://github.com/gurobokum/docusaurus-theme-daisyui.git"
   },
   "scripts": {
-    "build": "tsc --build tsconfig.client.json",
+    "build": "tsc --build  && node scripts/copyUntypedFiles.js && prettier --write 'lib/theme/**/*.js'",
     "lint": "eslint --max-warnings=0",
     "format": "prettier --write '**/*.{ts,tsx,js,jsx,json,md}'",
     "format:check": "prettier --check '**/*.{ts,tsx,js,jsx,json,md}'",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook:build": "storybook build",
+    "storybook:serve": "storybook serve",
     "docusaurus": "docusaurus start",
     "swizzle": "docusaurus swizzle"
   },
@@ -28,7 +29,10 @@
   "license": "MIT",
   "dependencies": {
     "@docusaurus/plugin-content-blog": "^3.8.1",
+    "@docusaurus/plugin-content-docs": "^3.8.1",
     "@docusaurus/types": "^3.8.1",
+    "@docusaurus/utils-common": "^3.8.1",
+    "@docusaurus/utils-validation": "^3.8.1",
     "clsx": "^2.1.1",
     "copy-text-to-clipboard": "^3.2.0"
   },
@@ -37,7 +41,6 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/module-type-aliases": "^3.8.1",
-    "@docusaurus/plugin-content-docs": "^3.8.1",
     "@docusaurus/preset-classic": "^3.8.1",
     "@docusaurus/theme-classic": "^3.8.1",
     "@docusaurus/theme-common": "^3.8.1",
@@ -47,12 +50,14 @@
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
     "@storybook/react-webpack5": "^9.0.12",
     "@types/react": "^19.1.8",
+    "chokidar": "^4.0.3",
     "dotenv": "^16.5.0",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-storybook": "^9.0.12",
+    "fs-extra": "^11.3.0",
     "globals": "^16.2.0",
     "husky": "^9.1.7",
     "prettier": "^3.5.3",
