@@ -1,5 +1,5 @@
 import React, { type ReactNode } from "react";
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import isInternalUrl from "@docusaurus/isInternalUrl";
@@ -13,7 +13,10 @@ export default function FooterLinkItem({ item }: Props): ReactNode {
 
   return (
     <Link
-      className={clsx("footer__link-item", className)}
+      className={twMerge(
+        "link link-hover inline-block flex flex-row items-center gap-2",
+        className,
+      )}
       {...(href
         ? {
             href: prependBaseUrlToHref ? normalizedHref : href,
@@ -23,7 +26,7 @@ export default function FooterLinkItem({ item }: Props): ReactNode {
           })}
       {...props}
     >
-      {label}
+      <span>{label}</span>
       {href && !isInternalUrl(href) && <IconExternalLink />}
     </Link>
   );

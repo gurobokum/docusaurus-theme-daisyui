@@ -42,7 +42,8 @@
     "@docusaurus/utils-common": "^3.8.1",
     "@docusaurus/utils-validation": "^3.8.1",
     "clsx": "^2.1.1",
-    "copy-text-to-clipboard": "^3.2.0"
+    "copy-text-to-clipboard": "^3.2.0",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",

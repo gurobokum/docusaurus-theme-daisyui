@@ -132,10 +132,10 @@ Related issue: https://github.com/facebook/docusaurus/issues/2961
 | EditThisPage                             | Unsafe       |   ✅    |          |           |
 | ErrorPageContent                         | Unsafe       |   ✅    |          |           |
 | Footer                                   | Safe         |   ✅    |          |           |
-| Footer/Copyright                         | Safe         |   ✅    |          |           |
-| Footer/Layout                            | Safe         |   ✅    |          |           |
+| Footer/Copyright                         | Safe         |   ✅    |    ✅    |           |
+| Footer/Layout                            | Safe         |   ✅    |    ✅    |           |
 | Footer/LinkItem                          | Safe         |   ✅    |          |           |
-| Footer/Links                             | Safe         |   ✅    |          |           |
+| Footer/Links                             | Safe         |   ✅    |    ✅    |           |
 | Footer/Links/MultiColumn                 | Safe         |   ✅    |          |           |
 | Footer/Links/Simple                      | Safe         |   ✅    |          |           |
 | Footer/Logo                              | Safe         |   ✅    |          |           |
