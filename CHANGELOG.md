@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.1](https://github.com/gurobokum/docusaurus-theme-daisyui/compare/v0.1.0...v0.1.1) (2025-07-09)
+
+
+### ✨ Features
+
+* add TailwindCSS and DaisyUI ([c8a6b51](https://github.com/gurobokum/docusaurus-theme-daisyui/commit/c8a6b5101d06cbb678051cc6640a3e44ef4de581))
+* apply tw classes to Navbar/Logo ([4eb7c7e](https://github.com/gurobokum/docusaurus-theme-daisyui/commit/4eb7c7e7f5c25faa9d36239d49dc6f037dfa1f8f))
+* apply tw for the main page ([66a1c23](https://github.com/gurobokum/docusaurus-theme-daisyui/commit/66a1c2377b4dc1e1cb31d8600d235dd449ea50e7))
+* use tw for the Footer components ([672d8ba](https://github.com/gurobokum/docusaurus-theme-daisyui/commit/672d8ba5a8f9099c333f599f171f7a4ec8127ffb))
+
 ## 0.1.0 (2025-07-08)
 
 
