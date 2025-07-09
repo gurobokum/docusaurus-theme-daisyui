@@ -28,7 +28,7 @@ export default function Heading({ as: As, id, ...props }: Props): ReactNode {
     },
     {
       heading: typeof props.children === "string" ? props.children : id,
-    }
+    },
   );
 
   return (
@@ -39,7 +39,7 @@ export default function Heading({ as: As, id, ...props }: Props): ReactNode {
         hideOnScroll
           ? styles.anchorWithHideOnScrollNavbar
           : styles.anchorWithStickyNavbar,
-        props.className
+        props.className,
       )}
       id={id}
     >
